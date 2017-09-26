@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="584.0" prefWidth="997.0" style="-fx-background-color: #37474f;" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.main.MainController">
+   <children>
+      <HBox fx:id="menusHolder" alignment="CENTER" layoutY="308.0" onMouseClicked="#closeDrawerAction" prefHeight="192.0" prefWidth="998.0" spacing="45.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="ADDMEMBER" onMouseClicked="#addNewMember">
+               <children>
+                  <Group>
+                     <children>
+                        <Pane layoutX="20.0" layoutY="41.0" prefHeight="144.0" prefWidth="184.0" style="-fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-color: #3d8c91; -fx-background-radius: 8;">
+                           <children>
+                              <Text fill="#a4fffc" layoutX="34.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Member" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Roboto Medium" size="20.0" />
+                                 </font>
+                              </Text>
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="22.0" layoutY="85.0" minHeight="-Infinity" prefHeight="1.0" prefWidth="148.0" style="-fx-background-color: #a4fffc;" textAlignment="CENTER" />
+                              <ImageView fitHeight="60.0" fitWidth="78.0" layoutX="62.0" layoutY="-30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="/ui/Pics/add.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Group>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="VIEWMEMBERS" onMouseClicked="#viewMembers">
+               <children>
+                  <Group fx:id="groupTrains">
+                     <children>
+                        <Pane layoutX="20.0" layoutY="41.0" prefHeight="144.0" prefWidth="184.0" style="-fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-color: #3d8c91; -fx-background-radius: 8;">
+                           <children>
+                              <Text fill="#a4fffc" layoutX="27.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View Members" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Roboto Medium" size="20.0" />
+                                 </font>
+                              </Text>
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="85.0" minHeight="-Infinity" prefHeight="1.0" prefWidth="148.0" style="-fx-background-color: #a4fffc;" textAlignment="CENTER" />
+                           </children>
+                        </Pane>
+                        <ImageView fitHeight="60.0" fitWidth="72.0" layoutX="76.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="/ui/Pics/view.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Group>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="STATISTICS" onMouseClicked="#showAnalysis">
+               <children>
+                  <Group fx:id="groupTrains1">
+                     <children>
+                        <Pane layoutX="20.0" layoutY="41.0" prefHeight="144.0" prefWidth="184.0" style="-fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-color: #3d8c91; -fx-background-radius: 8;">
+                           <children>
+                              <Text fill="#a4fffc" layoutX="50.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Statistics" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Roboto Medium" size="20.0" />
+                                 </font>
+                              </Text>
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="25.0" layoutY="85.0" minHeight="-Infinity" prefHeight="1.0" prefWidth="137.0" style="-fx-background-color: #a4fffc;" textAlignment="CENTER" />
+                           </children>
+                        </Pane>
+                        <ImageView fitHeight="60.0" fitWidth="72.0" layoutX="76.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="/ui/Pics/statistics.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Group>
+               </children>
+            </AnchorPane>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+      <Pane layoutX="-1.0" onMouseClicked="#closeDrawerAction" prefHeight="42.0" prefWidth="998.0" style="-fx-background-color: #37474f;" styleClass="custom-hBox" stylesheets="@style.css">
+         <children>
+            <HBox fx:id="hoxImages1" alignment="CENTER_RIGHT" layoutX="829.0" layoutY="4.0" prefHeight="42.0" prefWidth="168.0" spacing="20.0">
+               <children>
+                  <MaterialDesignIconView fx:id="minimize" fill="#f8f7f6" glyphName="MINUS" layoutX="135.0" layoutY="36.0" onMouseClicked="#minimizeAction" size="28.0" strokeDashOffset="9.0" strokeType="OUTSIDE" strokeWidth="6.0" wrappingWidth="31.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </MaterialDesignIconView>
+                  <MaterialDesignIconView fx:id="info" fill="#fcfcfc" glyphName="INFORMATION" onMouseClicked="#loadInfo" size="20" strokeDashOffset="9.0" strokeType="OUTSIDE" strokeWidth="6.0" wrappingWidth="20.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </MaterialDesignIconView>
+                  <MaterialDesignIconView fx:id="iconClose" fill="#fcfcfc" glyphName="CLOSE" layoutX="147.0" layoutY="42.0" onMouseClicked="#hideStage" size="28.0" strokeDashOffset="9.0" strokeType="OUTSIDE" strokeWidth="6.0" wrappingWidth="31.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </MaterialDesignIconView>
+               </children>
+            </HBox>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="320.0" layoutY="7.0" prefHeight="28.0" prefWidth="381.0" text="CRM MEMBERS MANAGEMENT SYSTEM" textAlignment="CENTER" textFill="#f8f6f6">
+               <font>
+                  <Font name="Bell MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <JFXHamburger fx:id="hamburger" layoutX="11.0" layoutY="8.0" prefHeight="27.0" prefWidth="34.0" />
+         </children>
+      </Pane>
+      <AnchorPane layoutY="45.0" onMouseClicked="#closeDrawerAction" opacity="0.95" prefHeight="257.0" prefWidth="997.0" style="-fx-background-color: white;" stylesheets="@style.css">
+         <children>
+            <ImageView fx:id="logoImageView" fitHeight="244.0" fitWidth="234.0" layoutX="90.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" x="300.0">
+               <image>
+                  <Image url="/ui/Pics/LOGO.jpg" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow height="0.0" radius="10.68" width="44.72" />
+         </effect>
+      </AnchorPane>
+      <Separator layoutY="294.0" prefHeight="14.0" prefWidth="998.0">
+         <effect>
+            <DropShadow height="5.93" radius="5.49" width="18.03" />
+         </effect>
+      </Separator>
+      <JFXButton fx:id="attendance" buttonType="RAISED" layoutX="415.0" layoutY="514.0" onAction="#openAttendance" prefHeight="34.0" prefWidth="184.0" style="-fx-background-color: #3d8c91; -fx-background-radius: 8;" text="Attendance " textFill="#f8f4f4">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <FontAwesomeIconView fill="#f2f0f0" glyphName="LIST" layoutX="431.0" layoutY="537.0" size="17.0" />
+      <Separator layoutY="38.0" prefHeight="13.0" prefWidth="994.0">
+         <effect>
+            <DropShadow height="5.93" radius="5.49" width="18.03" />
+         </effect>
+      </Separator>
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="190.0" focusTraversable="true" layoutY="43.0" prefHeight="288.0" prefWidth="141.0" />
+   </children>
+</AnchorPane>

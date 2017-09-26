@@ -1,0 +1,38 @@
+ .table-view{
+
+    -fx-background-insets: 10.0; /*change to 0 to remove the background margin line*/
+    -fx-cell-vertical-margin: 10.0;
+    -fx-vertical-gap: 10;
+
+}
+
+ .table-row-cell{
+
+    -fx-background-color: -fx-table-cell-border-color, white ;
+    -fx-text-fill: white;
+    -fx-background-insets: 0.0;
+
+ }
+.table-row-cell:selected{
+
+    -fx-background-color: #3d8c91;
+
+}
+
+.table-view > .virtual-flow > .scroll-bar:vertical,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track-background,
+.table-view > .virtual-flow > .scroll-bar:horizontal,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track-background {
+    -fx-background-color: transparent;
+}
+.table-view > .virtual-flow > .scroll-bar> .increment-button,
+.table-view > .virtual-flow > .scroll-bar> .decrement-button {
+    -fx-opacity: 0 ;
+
+}
+.custom-toolbar{
+    -fx-background-color: #3d8c91;
+-fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5);
+}

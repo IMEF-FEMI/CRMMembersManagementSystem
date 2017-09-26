@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.viewMember.ViewNumbersController">
+   <children>
+      <AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="587.0" prefWidth="997.0" style="-fx-border-radius: 10, 10, 10, 10;" stylesheets="@view_memberCSS.css">
+         <children>
+            <Pane layoutX="-2.0" layoutY="-2.0" onMouseClicked="#closeDrawerAction" prefHeight="34.0" prefWidth="999.0" styleClass="custom-toolbar" stylesheets="@view_memberCSS.css">
+               <children>
+                  <Separator layoutX="2.0" layoutY="33.0" prefHeight="6.0" prefWidth="995.0" />
+                  <HBox alignment="CENTER_RIGHT" layoutX="837.0" layoutY="-1.0" prefHeight="37.0" prefWidth="164.0" spacing="10.0">
+                     <children>
+                        <MaterialDesignIconView fx:id="minimize" fill="#f8f7f6" glyphName="MINUS" layoutX="135.0" layoutY="36.0" onMouseClicked="#minimizeAction" size="28.0" strokeDashOffset="9.0" strokeType="OUTSIDE" strokeWidth="6.0" wrappingWidth="31.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </MaterialDesignIconView>
+                        <MaterialDesignIconView fx:id="info" fill="#fcfcfc" glyphName="INFORMATION" layoutX="118.0" layoutY="40.0" onMouseClicked="#loadInfo" size="20" strokeDashOffset="9.0" strokeType="OUTSIDE" strokeWidth="6.0" wrappingWidth="26.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </MaterialDesignIconView>
+                        <MaterialDesignIconView fx:id="home" fill="#fcfcfc" glyphName="HOME" layoutX="67.0" layoutY="40.0" onMouseClicked="#loadMain" size="20" strokeDashOffset="9.0" strokeType="OUTSIDE" strokeWidth="6.0" wrappingWidth="22.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </MaterialDesignIconView>
+                        <MaterialDesignIconView fx:id="iconClose" fill="#fcfcfc" glyphName="CLOSE" layoutX="147.0" layoutY="42.0" onMouseClicked="#hideStage" size="20" strokeDashOffset="9.0" strokeType="OUTSIDE" strokeWidth="6.0" wrappingWidth="24.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </MaterialDesignIconView>
+                     </children>
+                  </HBox>
+                  <JFXHamburger fx:id="hamburger" layoutX="12.0" layoutY="8.0" prefHeight="18.0" prefWidth="26.0" />
+               </children>
+            </Pane>
+            <AnchorPane layoutX="-1.0" layoutY="38.0" minHeight="0.0" minWidth="0.0" onMouseClicked="#closeDrawerAction" prefHeight="546.0" prefWidth="997.0" style="-fx-background-color: #e0e0e0;">
+               <children>
+                  <TextField fx:id="tfsearch" layoutX="484.0" layoutY="14.0" onAction="#searchAction" promptText="Search Name / Number" AnchorPane.rightAnchor="364.0" />
+                  <JFXButton fx:id="btnRefresh" layoutX="293.0" layoutY="14.0" onAction="#refreshAction" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #09B28C;" text="Refresh" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <FontAwesomeIconView fill="#fcf9f9" glyphName="REFRESH" layoutX="302.0" layoutY="31.0" size="14.0" />
+                  <JFXButton layoutX="647.0" layoutY="14.0" onAction="#searchAction" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #09B28C;" text="Search" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <FontAwesomeIconView fill="#f2f0f0" glyphName="SEARCH" layoutX="651.0" layoutY="31.0" size="14.0" />
+                  <JFXButton fx:id="copyNumber" layoutX="578.0" layoutY="500.0" onAction="#copyAction" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #0B9CE3;" text="Copy Numbers" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <FontAwesomeIconView fill="#fffdfd" glyphName="COPY" layoutX="594.0" layoutY="517.0" size="14.0" />
+                  <Separator layoutX="1.0" layoutY="489.0" prefHeight="6.0" prefWidth="995.0" />
+                  <JFXDrawer fx:id="drawer" defaultDrawerSize="190.0" focusTraversable="true" layoutY="-7.0" prefHeight="288.0" prefWidth="141.0" />
+                  <MenuButton fx:id="view_members_by" layoutX="409.0" layoutY="14.0" mnemonicParsing="false" onAction="#closeDrawerAction" style="-fx-background-color: #09B28C;" text="View" textFill="WHITE">
+                     <items>
+                        <Menu fx:id="location" mnemonicParsing="false" text="Location" />
+                        <Menu fx:id="department_menu" mnemonicParsing="false" text="Department">
+                           <items>
+                              <RadioMenuItem fx:id="choir" mnemonicParsing="false" text="Choir" />
+                              <RadioMenuItem fx:id="usher" mnemonicParsing="false" text="Ushers" />
+                              <RadioMenuItem fx:id="children_teachers" mnemonicParsing="false" text="Children Teachers" />
+                              <RadioMenuItem fx:id="drama" mnemonicParsing="false" text="Drama" />
+                              <RadioMenuItem fx:id="security" mnemonicParsing="false" text="Security" />
+                              <RadioMenuItem fx:id="sanctuary_keepers" mnemonicParsing="false" text="Sanctuary Keepers" />
+                           </items>
+                        </Menu>
+                        <Menu fx:id="position" mnemonicParsing="false" text="Position">
+                           <items>
+                              <RadioMenuItem fx:id="pastor" mnemonicParsing="false" text="Pastors" />
+                              <RadioMenuItem fx:id="deacon" mnemonicParsing="false" text="Deacons" />
+                              <RadioMenuItem fx:id="deaconess" mnemonicParsing="false" text="Deaconess" />
+                           </items>
+                        </Menu>
+                        <Menu fx:id="marital_status" mnemonicParsing="false" text="Marital Status">
+                           <items>
+                              <RadioMenuItem fx:id="single" mnemonicParsing="false" text="SINGLE" />
+                              <Menu fx:id="married_menu" mnemonicParsing="false" text="MARRIED">
+                                 <items>
+                                    <RadioMenuItem fx:id="men" mnemonicParsing="false" text="Men" />
+                                    <RadioMenuItem fx:id="women" mnemonicParsing="false" text="Women" />
+                                    <RadioMenuItem fx:id="all_married" mnemonicParsing="false" text="All" />
+                                 </items>
+                              </Menu>
+                              <RadioMenuItem fx:id="children_teenagers" mnemonicParsing="false" text="CHILDREN / TEENAGERS" />
+                           </items>
+                        </Menu>
+                     </items>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </MenuButton>
+                  <AnchorPane layoutX="132.0" layoutY="58.0" prefHeight="416.0" prefWidth="746.0" styleClass="card" stylesheets="@style.css">
+                     <children>
+                        <JFXTreeTableView fx:id="treeview" layoutX="8.0" layoutY="14.0" onMouseClicked="#closeDrawerAction" prefHeight="416.0" prefWidth="746.0" stylesheets="@treetableview.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                  <Pane layoutX="12.0" layoutY="58.0" opacity="0.56" prefHeight="416.0" prefWidth="106.0" style="-fx-background-color: rgb(41, 61, 82,0.9);" styleClass="card" stylesheets="@style.css" />
+                  <Pane layoutX="894.0" layoutY="57.0" opacity="0.56" prefHeight="416.0" prefWidth="98.0" style="-fx-background-color: rgb(41, 61, 82,0.9);" styleClass="card" stylesheets="@style.css" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

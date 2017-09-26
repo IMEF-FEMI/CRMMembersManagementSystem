@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="337.0" prefWidth="141.0" stylesheets="@drawercontentCSS.css" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.viewMember.drawerContentController">
+   <children>
+      <ImageView fitHeight="96.0" fitWidth="142.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/ui/Pics/drawerContent.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="home" accessibleText="material_one" buttonType="RAISED" onAction="#homeAction" prefHeight="52.0" prefWidth="148.0" stylesheets="@drawercontentCSS.css" text="Main" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="viewMembers" accessibleText="material_one" buttonType="RAISED" layoutX="10.0" layoutY="97.0" onAction="#viewMembers" prefHeight="52.0" prefWidth="148.0" stylesheets="@drawercontentCSS.css" text="View Members" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="birthdays" accessibleText="material_one" buttonType="RAISED" onAction="#birthdayAction" prefHeight="52.0" prefWidth="148.0" stylesheets="@drawercontentCSS.css" text="Birthdays" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="viewNumbers" accessibleText="material_one" buttonType="RAISED" onAction="#viewNumberAction" prefHeight="52.0" prefWidth="148.0" stylesheets="@drawercontentCSS.css" text="Numbers" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="statistics" accessibleText="material_one" buttonType="RAISED" onAction="#statisticsAction" prefHeight="52.0" prefWidth="148.0" stylesheets="@drawercontentCSS.css" text="Statistics" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="exit" accessibleText="material_one" buttonType="RAISED" onAction="#exitActon" prefHeight="52.0" prefWidth="148.0" stylesheets="@drawercontentCSS.css" text="Exit" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+   </children>
+</VBox>

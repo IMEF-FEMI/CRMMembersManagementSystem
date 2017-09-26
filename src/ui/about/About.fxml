@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="266.0" prefWidth="289.0" style="-fx-background-color: #ff9e80;" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.about.AboutController">
+   <children>
+      <ImageView fitHeight="103.0" fitWidth="135.0" layoutX="93.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/ui/Pics/about.png" />
+         </image>
+      </ImageView>
+      <MaterialDesignIconView fx:id="closeIcon" fill="WHITE" glyphName="CLOSE" layoutX="259.0" layoutY="23.0" onMouseClicked="#closeStage" size="26.0" />
+      <VBox alignment="CENTER_LEFT" layoutX="28.0" layoutY="131.0" prefHeight="100.0" prefWidth="244.0" spacing="2.0">
+         <children>
+            <Label text="IMEF" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="PENCIL" size="22.0" wrappingWidth="42.428571701049805" />
+               </graphic>
+            </Label>
+            <Label text="bolajifemi28@gmail.com" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="ENVELOPE_ALT" size="22.0" wrappingWidth="42.428571701049805" />
+               </graphic>
+            </Label>
+            <Label text="+2348135571225" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="PHONE" size="26.0" wrappingWidth="42.428571701049805" />
+               </graphic>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

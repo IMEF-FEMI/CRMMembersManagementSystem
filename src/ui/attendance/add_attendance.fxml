@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="276.0" prefWidth="446.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.attendance.addAttendanceController">
+   <children>
+      <Pane layoutX="19.0" layoutY="23.0" prefHeight="237.0" prefWidth="407.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Separator layoutX="244.0" orientation="VERTICAL" prefHeight="237.0" prefWidth="3.0" />
+            <VBox layoutX="24.0" layoutY="51.0" prefHeight="171.0" prefWidth="194.0" spacing="25.0">
+               <children>
+                  <JFXTextField fx:id="data" prefHeight="38.0" prefWidth="194.0" promptText="Enter Data" />
+                  <JFXDatePicker fx:id="date" defaultColor="#4059a9" prefHeight="48.0" prefWidth="194.0" promptText="  Enter Todays Date" />
+                  <JFXComboBox fx:id="weekCombo" prefHeight="26.0" prefWidth="194.0" promptText="Select Week" />
+               </children>
+            </VBox>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="24.0" layoutY="14.0" prefHeight="38.0" prefWidth="183.0" text="Enter Attendance Data" textFill="#656262">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="save" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="261.0" layoutY="70.0" onAction="#onSave" prefHeight="38.0" prefWidth="124.0" style="-fx-background-color: #0081FF;" text="Save " textFill="#f8f8f8">
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton fx:id="clear" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="261.0" layoutY="131.0" onAction="#onClear" prefHeight="38.0" prefWidth="124.0" style="-fx-background-color: #EE4D39;" text="Clear" textFill="WHITE">
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+            </JFXButton>
+            <FontAwesomeIconView fill="#f2eded" glyphName="SAVE" layoutX="284.0" layoutY="95.0" size="17.0" />
+            <FontAwesomeIconView fill="#fcf9f9" glyphName="REMOVE" layoutX="285.0" layoutY="156.0" size="17.0" />
+            <JFXButton fx:id="done" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="261.0" layoutY="187.0" onAction="#closeStage" prefHeight="38.0" prefWidth="124.0" style="-fx-background-color: #009688;" text="Done" textFill="#f8f3f3">
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+            </JFXButton>
+            <FontAwesomeIconView fill="#eeeaea" glyphName="CHECK" layoutX="283.0" layoutY="212.0" size="17.0" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>
