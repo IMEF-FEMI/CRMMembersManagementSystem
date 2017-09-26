@@ -3,5 +3,5 @@ CRMMembersManagementSystem is a simple Javafx program for managing members in a 
 originally written for my Church(CRM) but can be easily modified for use in any church/organization.
 Database used ---- sqlite.
 libraries used-- jfoenix, TrayNotification, controlsFx, FontaAwesome(included in the /lib directory)
-NB: demo app Included
+NB: demo app and screenshots Included
 
